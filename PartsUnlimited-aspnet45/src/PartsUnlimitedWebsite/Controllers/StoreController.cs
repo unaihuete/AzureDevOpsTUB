@@ -34,7 +34,7 @@ namespace PartsUnlimited.Controllers
         // GET: /Store/Browse?genre=Disco
         public ActionResult Browse(int categoryId)
         {
-            // Retrieve Category genre and its Associated associated Products products from database
+            // aaaRetrieve Category genre and its Associated associated Products products from database
             var genreModel = db.Categories.Include("Products").Single(g => g.CategoryId == categoryId);
 
             return View(genreModel);
