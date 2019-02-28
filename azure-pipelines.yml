@@ -79,7 +79,6 @@ steps:
     PathtoPublish: 'PartsUnlimited-aspnet45/env/PartsUnlimitedEnv/Templates'
     ArtifactName: templates
 
-    steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: CredScan'
   inputs:
