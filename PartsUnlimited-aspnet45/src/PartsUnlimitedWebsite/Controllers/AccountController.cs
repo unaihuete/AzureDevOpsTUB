@@ -55,7 +55,7 @@ namespace PartsUnlimited.Controllers
                 return View(model);
             }
 
-            // This does not count login failures towards account lockout
+            // This does not cwdsount login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
 
