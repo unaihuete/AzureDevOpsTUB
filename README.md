@@ -1,0 +1,1 @@
+[![Build Status](https://dev.azure.com/AzureDevOpsTUB/AzureDevOpsTUB/_apis/build/status/unaihuete.AzureDevOpsTUB?branchName=master)](https://dev.azure.com/AzureDevOpsTUB/AzureDevOpsTUB/_build/latest?definitionId=1&branchName=master)
