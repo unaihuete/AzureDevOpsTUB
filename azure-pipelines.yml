@@ -52,7 +52,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
-    SourceFolder: 'PartsUnlimited-aspnet45/PartsUnlimited.UITests/bin/$(BuildConfiguration)'
+    SourceFolder: 'PartsUnlimited-aspnet45/PartsUnlimited.UITests/bin/debug'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
