@@ -18,7 +18,10 @@ namespace PartsUnlimited.Controllers
             db = context;
         }
 
-        //
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         // GET: /Store/
         public ActionResult Index()
         {
