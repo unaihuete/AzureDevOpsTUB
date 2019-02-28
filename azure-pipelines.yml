@@ -26,7 +26,7 @@ steps:
   inputs:
     solution: '**\*.sln'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
-    platform: 'any cpu)'
+    platform: 'any cpu'
     configuration: '$(BuildConfiguration)'
 
 - task: VSTest@2
