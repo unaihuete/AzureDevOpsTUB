@@ -48,18 +48,6 @@ steps:
     testResultsFiles: '**/*.trx'
   enabled: false
 
-- task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2
-  displayName: 'Run CredScan'
-  inputs:
-    outputFormat: csv
-    debugMode: false
-
-
-- task: CopyFiles@2
-  displayName: 'Copy Files CredScan'
-  inputs:
-    SourceFolder: 'D:\a\1_sdt\logs\CredentialScanne'
-    TargetFolder: '$(build.artifactstagingdirectory)/CredScan'
 
 
 - task: CopyFiles@2
@@ -79,9 +67,5 @@ steps:
     PathtoPublish: 'PartsUnlimited-aspnet45/env/PartsUnlimitedEnv/Templates'
     ArtifactName: templates
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: CredScan'
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/CredScan'
-    ArtifactName: CredScan
+
 
