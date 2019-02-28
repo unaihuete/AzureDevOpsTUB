@@ -27,18 +27,18 @@ steps:
     solution: '**\*.sln'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
     platform: 'any cpu)'
-    configuration: 'debug'
+    configuration: '$(BuildConfiguration)'
 
 - task: VSTest@2
   displayName: 'VsTest - testAssemblies'
   inputs:
     testAssemblyVer2: |
-     **\debug\*Test*.dll
+     **\$(BuildConfiguration)\*Test*.dll
      !**\obj\**
      
     testFiltercriteria: 'TestCategory!=Selenium'
     platform: 'any cpu'
-    configuration: 'debug'
+    configuration: '$(BuildConfiguration)'
   continueOnError: true
 
 - task: PublishTestResults@2
@@ -52,7 +52,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
-    SourceFolder: 'PartsUnlimited-aspnet45/PartsUnlimited.UITests/bin/debug'
+    SourceFolder: 'PartsUnlimited-aspnet45/PartsUnlimited.UITests/bin/$(BuildConfiguration)'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
